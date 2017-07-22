@@ -1,17 +1,62 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  </head>
+<head>
+<style type='text/css'>
 
-  <body>
+body{
+  background-color:#0052A5;
+}
 
-    <p>Click the button to say hello PLEASE WORK.</p>
+h1{
+  color:#FFFFFF;
+  font-family: Palatino;
+}
 
-    <button id = "button">Try it</button>
+.prompt{
+  color:#FFFFFF;
+  font-family: Palatino;
+  text-align: center;
+}
+
+.logo {
+  width: 150px;
+  height: 120px;
+}
+
+.donkey{ float: right; }
+
+.elephant{ float:left; }
+
+.logoHeader{
+  text-align:center;
+}
+
+.submitButton{
+  width: 300px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 30px;
+}
+</style>
+
+<img class = "logo donkey" src = "democrat donkey.png">
+<img class = "logo elephant" src = "republican elephant.png">
+<h1 class = "logoHeader">Can't fool me!</h1>
+
+</head>
+<body>
+        <p class = "prompt">Submit an article below and see what kind of political view it represents</p>
+        <p>
+          <input class = "urlBox"
+                 type = "text"
+                 style="color:#888;"
+                 id = "myText"
+                 value = "Article URL" />
+        </p>
+
+      <button class = "submitButton"> Submit </button>
+
     <script src = "popup.js"> </script>
-    <div id = "result">
-      hello
-    </div>
 
-  </body>
+</body>
 </html>
