@@ -4,6 +4,7 @@
 <style type='text/css'>
 
 body{
+  text-align: center;
   background-color:#0052A5;
 }
 
@@ -18,14 +19,6 @@ h1{
   text-align: center;
 }
 
-.logo {
-  width: 150px;
-  height: 120px;
-}
-
-.donkey{ float: right; }
-
-.elephant{ float:left; }
 
 .logoHeader{
   text-align:center;
@@ -37,13 +30,47 @@ h1{
   margin-right: 100px;
   margin-top: 30px;
 }
+
+.span_screen{
+  width:100%;
+  height: 300px;
+}
+
+.image{
+  width:33%;
+  height:auto
+}
+
+.image_holder{
+  text-align:center;
+}
+
+#result{
+  color:white;
+}
+
+
+
 </style>
 
-<img class = "logo donkey" src = "democrat donkey.png">
-<img class = "logo elephant" src = "republican elephant.png">
-<h1 class = "logoHeader">Can't fool me!</h1>
+<table class = "span_screen">
+  <tr>
+    <td class = "image_holder">
+      <img class = "image" src = "/democrat donkey.png">
+    </td>
+
+    <td>
+      <h1 class = "logoHeader">Can't fool me!</h1>
+    </td>
+
+    <td class = "image_holder">
+      <img class = "image" src = "/republican elephant.png">
+    </td>
+  </tr>
+</table>
 
 </head>
+
 <body>
         <p class = "prompt">Submit an article below and see what kind of political view it represents</p>
         <p>
@@ -56,7 +83,7 @@ h1{
 
       <button class = "submitButton"> Submit </button>
 
-    <script src = "popup.js"> </script>
+    <p id = "result"> The title is <p>
 
 </body>
 </html>
