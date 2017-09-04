@@ -8,15 +8,18 @@ var json = {}
 var index = 'article';
 
 var listOfUrls = [];
+
+//Republican training set
 listOfUrls[0] = 'http://www.foxnews.com/politics/2017/09/04/haley-says-north-korea-is-begging-for-war-calls-for-strongest-possible-un-sanctions.html';
 listOfUrls[1] = 'http://www.foxnews.com/politics/2017/09/04/hill-gop-conservatives-not-backing-trump-plan-to-tie-harvey-money-to-debt-ceiling-vote.html';
 listOfUrls[2] = 'http://www.foxnews.com/politics/2017/09/03/trump-calls-north-korea-dangerous-and-great-threat-after-overnight-nuclear-test.html';
+
+//Democrat training set
 
 for(var i = 0; i < listOfUrls.length-1; i++){
 
     app.get('/scrape', function(req, res){
         url = listOfUrls[i];
-        //url = 'http://www.foxnews.com/politics/2017/09/04/haley-says-north-korea-is-begging-for-war-calls-for-strongest-possible-un-sanctions.html';
 
         request(url, function(error, response, html){
             if(!error){
@@ -33,10 +36,10 @@ for(var i = 0; i < listOfUrls.length-1; i++){
                 json[thisIndex] = article;
             }
 
+
             fs.writeFile('output.json', JSON.stringify(json, null, 4), function(err){
-
-                console.log('File successfully written! - Check your project directory for the output.json file');
-
+               console.log('File successfully written! - Check your project directory for the output.json file');
+          
             })
 
         
