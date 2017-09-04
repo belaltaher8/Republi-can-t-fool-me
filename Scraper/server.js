@@ -3,7 +3,6 @@ var fs = require('fs');
 var request = require('request');
 var cheerio = require('cheerio');
 var app     = express();
-var article;
 
 app.get('/scrape', function(req, res){
 
@@ -13,12 +12,16 @@ request(url, function(error, response, html){
     if(!error){
         var $ = cheerio.load(html);
 
+    var article;
     var json = { article : ""};
 
 
     $('.article-body').filter(function(){
         var data = $(this);
-        article = data.text();         
+        article = data.text();  
+
+        article = article.replace('\\n', ''); 
+        article = article.replace('\\t', '');      
 
         json.article = article;
     })
@@ -43,5 +46,5 @@ res.send('Check your console!')
 })
 
 app.listen('8081') 
-console.log('hi' + article); 
+console.log('wow i hope this works'); 
 exports = module.exports = app;
