@@ -4,46 +4,48 @@ var request = require('request');
 var cheerio = require('cheerio');
 var app     = express();
 
-app.get('/scrape', function(req, res){
+var json = {}
+var index = 'article';
 
-url = 'http://www.foxnews.com/opinion/2017/09/04/rep-lamar-smith-its-time-for-gop-to-go-on-offensive-ignore-liberal-media-and-speak-directly-to-american-people.html';
+var listOfUrls = [];
+listOfUrls[0] = 'http://www.foxnews.com/politics/2017/09/04/haley-says-north-korea-is-begging-for-war-calls-for-strongest-possible-un-sanctions.html';
+listOfUrls[1] = 'http://www.foxnews.com/politics/2017/09/04/hill-gop-conservatives-not-backing-trump-plan-to-tie-harvey-money-to-debt-ceiling-vote.html';
+listOfUrls[2] = 'http://www.foxnews.com/politics/2017/09/03/trump-calls-north-korea-dangerous-and-great-threat-after-overnight-nuclear-test.html';
 
-request(url, function(error, response, html){
-    if(!error){
-        var $ = cheerio.load(html);
+for(var i = 0; i < listOfUrls.length-1; i++){
 
-    var article;
-    var json = { article : ""};
+    app.get('/scrape', function(req, res){
+        url = listOfUrls[i];
+        //url = 'http://www.foxnews.com/politics/2017/09/04/haley-says-north-korea-is-begging-for-war-calls-for-strongest-possible-un-sanctions.html';
+
+        request(url, function(error, response, html){
+            if(!error){
+                var $ = cheerio.load(html);
+
+                var article = '';
 
 
-    $('.article-body').filter(function(){
-        var data = $(this);
-        article = data.text();  
+                $('article p').filter(function(){
+                    var data = $(this);
+                    article = article + data.text();  
+                })
+                var thisIndex = index + i;
+                json[thisIndex] = article;
+            }
 
-        article = article.replace('\\n', ''); 
-        article = article.replace('\\t', '');      
+            fs.writeFile('output.json', JSON.stringify(json, null, 4), function(err){
 
-        json.article = article;
+                console.log('File successfully written! - Check your project directory for the output.json file');
+
+            })
+
+        
+            res.send('Check your console!')
+
+        });
     })
 }
 
-// To write to the system we will use the built in 'fs' library.
-// In this example we will pass 3 parameters to the writeFile function
-// Parameter 1 :  output.json - this is what the created filename will be called
-// Parameter 2 :  JSON.stringify(json, null, 4) - the data to write, here we do an extra step by calling JSON.stringify to make our JSON easier to read
-// Parameter 3 :  callback function - a callback function to let us know the status of our function
-
-fs.writeFile('output.json', JSON.stringify(json, null, 4), function(err){
-
-    console.log('File successfully written! - Check your project directory for the output.json file');
-
-})
-
-// Finally, we'll just send out a message to the browser reminding you that this app does not have a UI.
-res.send('Check your console!')
-
-    }) ;
-})
 
 app.listen('8081') 
 console.log('wow i hope this works'); 
