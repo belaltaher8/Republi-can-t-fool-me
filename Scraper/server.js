@@ -50,12 +50,76 @@ listOfUrls[36] = 'http://www.foxnews.com/opinion/2017/07/28/how-trump-can-win-ob
 listOfUrls[37] = 'http://www.foxnews.com/opinion/2017/07/24/democrats-new-slogan-like-bad-pizza-slice-slathered-with-40-year-old-ingredients-and-almost-no-meat.html';
 listOfUrls[38] = 'http://www.foxnews.com/opinion/2017/07/24/jared-kushners-meetings-were-both-legal-and-beneficial.html';
 listOfUrls[39] = 'http://www.foxnews.com/opinion/2017/07/24/lewandowski-daily-beast-should-not-be-allowed-to-be-publication.html';
-listOfUrls[40] =
+listOfUrls[40] = 'http://www.foxnews.com/opinion/2017/08/09/obama-administration-knew-about-north-koreas-miniaturized-nukes.html';
+listOfUrls[41] = 'http://www.foxnews.com/opinion/2017/08/02/second-amendment-has-won-again-in-washington-so-why-wont-supreme-court-fully-enforce-it.html';
+listOfUrls[42] = 'http://www.foxnews.com/opinion/2017/07/24/sarah-huckabee-sanders-called-butch-queen-by-daily-beast-writer-and-left-is-silent.html';
+listOfUrls[43] = 'http://www.foxnews.com/opinion/2017/07/23/vice-president-mike-pence-trumps-triumphs-are-many-after-only-six-months-and-hes-just-getting-started.html';
+listOfUrls[44] = 'http://www.foxnews.com/opinion/2017/07/24/gregg-jarrett-donald-trump-jr-did-not-violate-campaign-laws-pelosi-and-others-are-wrong.html';
+listOfUrls[45] = 'http://www.breitbart.com/big-government/2017/09/06/meet-the-swamp-donald-trump-plans-agenda-with-pelosi-ryan-mcconnell-and-schumer/';
+listOfUrls[46] = 'http://www.breitbart.com/big-government/2017/09/06/donald-trump-wants-permanent-daca-deal-where-everybody-is-happy/';
+listOfUrls[47] = 'http://www.breitbart.com/big-government/2017/09/06/trumps-deal-democrats-warning-republicans-establishment-conservative-alike/';
+listOfUrls[48] = 'http://www.breitbart.com/big-government/2017/09/05/ttrump-to-congress-legalize-daca-or-i-will-revisit/';
+listOfUrls[49] = 'http://www.breitbart.com/big-government/2017/09/06/donald-trump-on-deal-with-democrats-everyone-was-happy-not-too-happy/';
+listOfUrls[50] = 'http://www.breitbart.com/radio/2017/09/06/angel-mom-mendoza-politicians-fighting-illegal-immigrants-not-american-citizens/';
+listOfUrls[51] = 'http://www.breitbart.com/big-government/2017/09/06/donald-trump-warning-hurricane-irma-looks-like-largest-ever-recorded-in-the-atlantic/';
+listOfUrls[52] = 'http://www.breitbart.com/big-hollywood/2017/09/06/modern-family-producer-christians-oppose-daca-amnesty-fk/';
+listOfUrls[53] = 'http://www.breitbart.com/big-government/2017/09/05/punish-americans-heritage-reward-dreamers-daca-outrage-exposes-left/';
+listOfUrls[54] = 'http://www.breitbart.com/big-journalism/2017/09/04/houston-proves-everything-msm-says-divided-country-lie/';
+listOfUrls[55] = 'http://www.breitbart.com/big-government/2017/09/04/delingpole-trump-appoints-conservative-ex-navy-flier-to-run-nasa-liberal-heads-explode/';
+listOfUrls[56] = 'http://www.breitbart.com/big-government/2017/09/02/wsj-trump-administration-weighs-withdrawal-south-korea-trade-pact/';
+listOfUrls[57] = 'http://www.breitbart.com/big-government/2017/08/29/liberal-journalist-shields-man-from-antifa-attackers-i-thought-they-were-going-to-kill-him/';
+listOfUrls[58] = 'http://www.breitbart.com/big-journalism/2017/08/29/cnn-republican-ana-navarro-contributed-thousands-and-thousands-of-dollars-to-democrats/';
+listOfUrls[59] = 'http://www.breitbart.com/big-journalism/2017/08/29/nolte-leftists-and-media-cheer-as-mega-corporations-strip-away-free-speech-rights/';
+listOfUrls[60] = 'http://www.breitbart.com/big-government/2017/08/26/report-west-wing-dems-fear-don-jr-will-give-potus-articles-conservative-media/';
+listOfUrls[61] = 'http://www.breitbart.com/london/2017/08/26/antifa-warns-will-attack-canadian-journalists-protests/';
+listOfUrls[62] = 'http://www.breitbart.com/big-journalism/2017/08/25/hillary-book-excerpt-reinforces-her-greatest-weaknesses/';
+listOfUrls[63] = 'http://www.breitbart.com/big-government/2017/08/23/trump-supporters-roar-cnn-sucks-live-on-cnn/';
+listOfUrls[64] = 'http://www.breitbart.com/big-journalism/2017/08/23/los-angeles-times-trumps-call-law-order-racist/';
+listOfUrls[65] = 'http://www.breitbart.com/tech/2017/08/23/new-york-times-vox-declare-corporations-the-moral-voice-of-america/';
+listOfUrls[66] = 'http://www.breitbart.com/big-government/2017/08/20/liberal-historian-praises-brave-corker-for-questioning-trump-stability/';
+listOfUrls[67] = 'http://www.breitbart.com/big-journalism/2017/08/20/cnn-daily-beast-matt-lewis-trump-voters-asses-bunch-of-idiots/';
+listOfUrls[68] = 'http://www.breitbart.com/big-government/2017/08/19/cnn-smears-again-don-lemon-implies-breitbart-platform-for-nazis/';
+listOfUrls[69] = 'http://www.breitbart.com/big-government/2017/08/19/cnn-normalizes-antifa-leftists-seek-peace-through-violence/';
+listOfUrls[70] = 'http://www.breitbart.com/big-government/2017/09/02/nancy-pelosi-the-voters-dont-want-to-hear-us-criticizing-the-president/';
+listOfUrls[71] = 'http://www.breitbart.com/big-journalism/2017/09/01/as-its-influence-wanes-increasingly-militant-msm-promotes-violence-and-censorship/';
+listOfUrls[72] = 'http://www.breitbart.com/big-journalism/2017/09/01/leftists-apoplectic-smear-kris-kobach-as-nazi-for-paid-breitbart-column/';
+listOfUrls[73] = 'http://www.breitbart.com/video/2017/09/01/tucker-carlson-rips-cnns-kamau-bell-for-inciting-rage-at-berkeley-rally-you-are-peddling-hate/';
+listOfUrls[74] = 'http://www.breitbart.com/big-journalism/2017/08/30/cnn-reporter-exits-bubble-discovers-just-how-much-texas-hates-cnn/';
+listOfUrls[75] = 'http://www.breitbart.com/tech/2017/08/17/cnn-jim-sciutto-charlottesville-terror-attacks-europe/';
+listOfUrls[76] = 'http://www.breitbart.com/big-journalism/2017/08/17/joe-scarborough-trump-a-racist-or-bigot/';
+listOfUrls[77] = 'http://www.breitbart.com/big-government/2017/08/17/busted-morning-joe-caught-lying-about-steve-bannon/';
+listOfUrls[78] = 'http://www.breitbart.com/radio/2017/08/17/paris-dennard-liberals-shut-down-black-conservative-speech-personal-attacks/';
+listOfUrls[79] = 'http://www.breitbart.com/big-government/2017/08/17/hit-list-cnn-publishes-map-confederate-monuments-u-s/';
+listOfUrls[80] = 'http://www.breitbart.com/big-government/2017/08/17/new-york-times-charlottesville-protesters-not-white-supremacists-nazis/';
+listOfUrls[81] = 'http://www.breitbart.com/big-government/2017/08/16/delingpole-actually-no-d-day-wasnt-won-by-masked-leftist-thugs/';
+listOfUrls[82] = 'http://www.breitbart.com/radio/2017/08/16/dsouza-racist-democrat-woodrow-wilson-a-pretty-good-candidate-to-have-his-statue-pulled-down/';
+listOfUrls[83] = 'http://www.breitbart.com/big-government/2017/08/16/safe-space-history-left-wing-activists-complacent-governments-destroy-confederate-monuments-across-nation/';
+listOfUrls[84] = 'http://www.breitbart.com/big-journalism/2017/08/15/media-shaken-trump-press-conference-comments-charlottesville/';
+listOfUrls[85] = 'http://www.breitbart.com/big-government/2017/08/15/donald-trump-reporters-charlottesville-violence/';
+listOfUrls[86] = 'http://www.breitbart.com/tech/2017/08/15/new-york-times-column-omits-violent-remarks-by-leftist-professors/';
+listOfUrls[87] = 'http://www.breitbart.com/big-government/2017/08/15/yahoo-news-antifa-glowing-profile/';
+listOfUrls[88] = 'http://www.breitbart.com/radio/2017/08/15/corey-stewart-violent-left-antifa-emboldened-charlottesville/';
+listOfUrls[89] = 'http://www.breitbart.com/video/2017/08/14/watch-cnn-contributor-hurls-racial-epithet-black-republican-air/';
+listOfUrls[90] = 'http://www.breitbart.com/big-government/2017/08/12/female-reporter-for-the-hill-allegedly-punched-by-antifa-protester-in-charlottesville/';
+listOfUrls[91] = 'http://www.breitbart.com/big-government/2017/08/10/fivethirtyeight-dems-could-lose-five-senate-seats-remain-house-minority-in-one-of-most-positive-2018-outcomes/';
+listOfUrls[92] = 'http://www.breitbart.com/video/2017/08/09/scarborough-calls-trump-reading-conservative-news-calls-sick/';
+listOfUrls[93] = 'http://www.breitbart.com/big-government/2017/08/09/ann-coulter-trump-got-tongue-media/';
+listOfUrls[94] = 'http://www.breitbart.com/big-journalism/2017/08/09/media-triggered-after-new-york-times-leaker-cultivation-process-exposed/';
+listOfUrls[95] = 'http://www.breitbart.com/big-journalism/2017/08/08/mcmaster-msm-allies-panic-claim-breitbarts-jewish-jerusalem-editor-anti-jew/';
+listOfUrls[96] = 'http://www.breitbart.com/tech/2017/08/08/cnn-spreads-fake-news-about-google-viewpoint-diversity-manifesto/';
+listOfUrls[97] = 'http://www.breitbart.com/big-government/2017/08/06/cnn-jim-acosta-admits-still-clueless-about-immigration-policy/';
+listOfUrls[98] = 'http://www.breitbart.com/big-government/2017/08/06/liberal-anti-trump-media-group-goes-embattled-gen-mcmaster/';
+listOfUrls[99] = 'http://www.breitbart.com/big-government/2017/08/05/cnn-ana-navarro-trump-immigration-plan-racist/';
+listOfUrls[100] = 'http://www.breitbart.com/big-government/2017/08/05/more-leftist-hysteria-mag-says-gorka-bannon-worse-for-jews-than-anti-israel-radical-sarsour/';
+listOfUrls[101] = 'http://www.breitbart.com/big-government/2017/08/03/trump-transcripts-reveal-man-committed-private-public-maga/';
+listOfUrls[102] = 'http://www.breitbart.com/big-government/2017/07/31/morning-joe-begs-wh-chief-kelly-sideline-nationalist-bannon-encouraging-trump-attack-opposition-media/';
+
 
 //Democrat training set
 
-for(var i = 0; i < listOfUrls.length-1; i++){
 
+for(var i = 0; i < listOfUrls.length-1; i++){
+    //TODO: add promises
     app.get('/scrape', function(req, res){
         url = listOfUrls[i];
 
