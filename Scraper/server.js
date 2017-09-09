@@ -7,7 +7,7 @@ var app     = express();
 var listOfUrls = [];
 
 //Republican training set
-listOfUrls[0] = 'https://www.toddstarnes.com/column/senate-democrats-attack-judicial-nominees-catholic-faith';
+listOfUrls[0] = ''; // bad data removed this
 listOfUrls[1] = 'http://www.foxnews.com/opinion/2017/09/06/trump-must-confront-iran-not-just-north-korea-as-tackles-nuclear-threat.html';
 listOfUrls[2] = 'http://www.foxnews.com/opinion/2017/09/06/michael-goodwin-trumps-daca-decision-reveals-immigration-cowards-in-both-parties-can-congress-man-up-in-2017.html';
 listOfUrls[3] = 'http://www.foxnews.com/opinion/2017/09/05/trump-acted-on-daca-now-its-time-for-congress-to-show-heart-and-smarts-on-immigration.html'
@@ -209,25 +209,25 @@ listOfUrls[194] = 'http://www.slate.com/blogs/the_slatest/2017/08/16/trump_impea
 
 
     app.get('/scrape', function(req, res){
-        url = listOfUrls[0];
+        url = listOfUrls[2];
 
         request(url, function(error, response, html){
             if(!error){
                 var $ = cheerio.load(html);
-                var article = '';
+                var article = "";
 
                 var json = { article: ""};
 
 
-                $('article p').filter(function(){
+                $("article p").filter(function(){
                     var data = $(this);
                     article = article + data.text();  
                 })
 
                 if(article === ""){
-                    $('p').filter(function(){
-                        var data = $(this);
-                        article = article + data.text();  
+                    $("p").filter(function(){
+                        data = $(this);
+                        article = article + data.text();
                     })    
                 }
 
