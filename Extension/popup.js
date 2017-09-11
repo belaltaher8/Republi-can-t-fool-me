@@ -11,11 +11,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 		var url = document.getElementById('urlBox').value;
 
-		console.log(url);
-
 		var xhr = new XMLHttpRequest(); 
 
-		xhr.open("POST", "https://murmuring-basin-19452.herokuapp.com/classify", true); 
+		xhr.open("POST", "https://murmuring-basin-19452.herokuapp.com/classify", true);
+		xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8"); 
 
 		xhr.onload = function (e) { 
 			if (xhr.readyState === 4) { 
@@ -34,9 +33,8 @@ document.addEventListener('DOMContentLoaded', function() {
 			console.error(xhr.statusText); 
 		}; 
 
-		var myDict = {};
-		myDict["URL"] = url;
-
+		var myDict = {myUrl : url};
+		
 		xhr.send(JSON.stringify(myDict));
 
 
