@@ -8,8 +8,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 	submitButton.addEventListener('click', function(){
 
-		var url = document.getElementById('urlBox');
-		console.log("Gets here");
+
+		var url = document.getElementById('urlBox').value;
+
+		console.log(url);
 
 		var xhr = new XMLHttpRequest(); 
 
@@ -35,6 +37,9 @@ document.addEventListener('DOMContentLoaded', function() {
 		var myDict = {}
 		myDict["URL"] = url;
 		xhr.send(JSON.stringify(myDict));
+		console.log(JSON.stringify(myDict));
+
+
 
 	});
 
