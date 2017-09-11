@@ -209,7 +209,7 @@ listOfUrls[194] = 'http://www.slate.com/blogs/the_slatest/2017/08/16/trump_impea
 
 
     app.get('/scrape', function(req, res){
-        url = listOfUrls[15];
+        url = listOfUrls[37];
 
         request(url, function(error, response, html){
             if(!error){
@@ -221,7 +221,7 @@ listOfUrls[194] = 'http://www.slate.com/blogs/the_slatest/2017/08/16/trump_impea
 
                 $("article p").filter(function(){
                     var data = $(this);
-                    article = article + data.text();  
+                    article = article + " " + data.text();  
                 })
 
                 if(article === ""){
