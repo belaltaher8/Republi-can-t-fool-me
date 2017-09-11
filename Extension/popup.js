@@ -34,8 +34,10 @@ document.addEventListener('DOMContentLoaded', function() {
 			console.error(xhr.statusText); 
 		}; 
 
+		var myDict = {};
+		myDict["URL"] = url;
 
-		xhr.send(url);
+		xhr.send(JSON.stringify(myDict));
 
 
 
