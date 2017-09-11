@@ -13,7 +13,7 @@ h1{
   font-family: Palatino;
 }
 
-.prompt{
+#prompt{
   color:#FFFFFF;
   font-family: Palatino;
   text-align: center;
@@ -24,7 +24,7 @@ h1{
   text-align:center;
 }
 
-.submitButton{
+#submitButton{
   width: 300px;
   margin-left: 100px;
   margin-right: 100px;
@@ -71,18 +71,19 @@ h1{
 </head>
 
 <body>
-        <p class = "prompt">Submit an article below and see what kind of political view it represents</p>
+        <p class = "prompt">
+          Submit an article below and see what kind of political view it represents</p>
+
         <p>
-          <input class = "urlBox"
+          <input id = "urlBox"
                  type = "text"
-                 style="color:#888;"
-                 id = "myText"
+                 style= "color:#888;"
                  value = "Article URL" />
         </p>
 
-      <button class = "submitButton"> Submit </button>
+      <button id = "submitButton"> Submit </button>
 
-    <p id = "result"> The title is <p>
+    <p id = "result"> The title is a ___ article <p>
 
 </body>
 </html>

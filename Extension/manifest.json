@@ -11,8 +11,13 @@
   "default_popup" : "popup.html"
   },
 
+  "content_scripts" : [ {
+      "matches" : [ "http://www.google.com/*"],
+      "js": ["popup.js"]
+    } ],
+
   "permissions": [
-    "bookmarks"
+    "tabs", "http://*/*"
   ]
 
 }

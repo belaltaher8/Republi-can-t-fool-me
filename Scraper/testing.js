@@ -2,7 +2,7 @@
 var sw = require('stopword');
 var stem = require('stem-porter');
 var natural = require('natural');
-var tokenizer new natural.WordTokenizer();
+
 
 var articles = [];
 
@@ -45,7 +45,7 @@ function addToHashMap(articleText){
 	//Removes special characters
 	for (var i=0; i< oldSplitList.length; i++) {
 	    if (oldSplitList[i] === search_term) {
-	        oldSplitList.splice(i, 1);
+	        oldSplitList.(i, 1);
 	    }
 	    else if (oldSplitList[i] === search_term2) {
 	        oldSplitList.splice(i, 1);
@@ -77,27 +77,21 @@ function addToHashMap(articleText){
 	for(var i = 0; i< newSplitList.length-1; i++ ){
 		var newBigram = newSplitList[i] + ' ' + newSplitList[i+1];
 
-		//If any special characters were missed due to them being \n\n remove ignore those
-		if( (newBigram.indexOf("\n") == -1) && (newBigram.indexOf("\t") == -1)){
+		//If the bigram just found is in the global hashmap and not in this articles
+		if((newBigram in hashmap) && !(newBigram in personalHashMap)){
+	
+			//Add the frequency in the global hashmap
+			hashmap[newBigram] = hashmap[newBigram] + 1;
+			//And add it to the personal hashmap
+			personalHashMap[newBigram] = 1;
+		}
+		//If the bigram is not in the global hashmap nor the personal hashmap
+		else if (!(newBigram in hashmap) && !(newBigram in personalHashMap)){
 
-			//If the bigram just found is in the global hashmap and not in this articles
-			if((newBigram in hashmap) && !(newBigram in personalHashMap)){
-
-				//Add the frequency in the global hashmap
-				hashmap[newBigram] = hashmap[newBigram] + 1;
-				//And add it to the personal hashmap
-				personalHashMap[newBigram] = 1;
-			}
-			//If the bigram is not in the global hashmap nor the personal hashmap
-			else if (!(newBigram in hashmap) && !(newBigram in personalHashMap)){
-
-				//Add it to the global hashmap
-				hashmap[newBigram] = 1;
-
-				//Add it to the personal hashmap
-				personalHashMap[newBigram] = 1;
-			}
-
+			//Add it to the global hashmap
+			hashmap[newBigram] = 1;
+			//Add it to the personal hashmap
+			personalHashMap[newBigram] = 1;
 		}
 
 	}

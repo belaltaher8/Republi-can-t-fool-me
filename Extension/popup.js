@@ -1,11 +1,44 @@
-function inputFocus(){
-    i = document.getElementById("myText");
-    if(i.value==i.defaultValue){ i.value=""; i.style.color="#000"; }
-}
-function inputBlur(){
-    i = document.getElementById("myText");
-    if(i.value==""){ i.value=i.defaultValue; i.style.color="#888"; }
+alert("Content script loaded");
+console.log("Gets here");
+
+/*document.addEventListener('DOMContentLoaded', function() {
+
+	
+
+	var submitButton = document.getElementById('submitButton');
+
+	submitButton.addEventListener('click', function(){
+
+		var url = document.getElementById('urlBox');
+		console.log("Gets here");
+
+		var xhr = new XMLHttpRequest(); 
+
+		xhr.open("POST", "https://murmuring-basin-19452.herokuapp.com/classify", true); 
+
+		xhr.onload = function (e) { 
+			if (xhr.readyState === 4) { 
+				if (xhr.status === 200) { 
+				var respJSON = JSON.parse(xhr.responseText); 
+				document.getElementById("result").innerHTML = respJSON["Answer"];
+				}
+				else { 
+				//console.error(xhr.statusText); 
+				//handle error status 
+				} 
+			} 
+		}; 
+
+		xhr.onerror = function (e) { 
+			console.error(xhr.statusText); 
+		}; 
+
+		var myDict = {}
+		myDict["URL"] = url;
+		xhr.send(JSON.stringify(myDict));
+
+	}
+
 }
 
-document.getElementById("myText").onfocus = inputFocus;
-document.getElementById("myText").onblur = inputBlur;
+ */
