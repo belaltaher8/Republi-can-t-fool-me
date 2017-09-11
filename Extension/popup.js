@@ -34,10 +34,8 @@ document.addEventListener('DOMContentLoaded', function() {
 			console.error(xhr.statusText); 
 		}; 
 
-        var json = {url : ""};
-        json.url = url;
 
-		xhr.send(json);
+		xhr.send(url);
 
 
 
