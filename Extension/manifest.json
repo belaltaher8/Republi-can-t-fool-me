@@ -17,7 +17,8 @@
     } ],
 
   "permissions": [
-    "tabs", "http://*/*"
+    "tabs", "http://*/*",
+    "https://murmuring-basin-19452.herokuapp.com/classify"
   ]
 
 }

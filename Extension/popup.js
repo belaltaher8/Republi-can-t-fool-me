@@ -1,7 +1,6 @@
-alert("Content script loaded");
-console.log("Gets here");
 
-/*document.addEventListener('DOMContentLoaded', function() {
+
+document.addEventListener('DOMContentLoaded', function() {
 
 	
 
@@ -37,8 +36,6 @@ console.log("Gets here");
 		myDict["URL"] = url;
 		xhr.send(JSON.stringify(myDict));
 
-	}
+	});
 
-}
-
- */
+});
