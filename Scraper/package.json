@@ -5,6 +5,7 @@
   "main": "server.js",
   "author": "Scotch",
   "dependencies": {
+    "bayes": "0.0.7",
     "cheerio": "latest",
     "express": "latest",
     "natural-synaptic": "^1.0.1",
