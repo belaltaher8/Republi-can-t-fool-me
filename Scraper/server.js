@@ -209,7 +209,7 @@ listOfUrls[194] = 'http://www.slate.com/blogs/the_slatest/2017/08/16/trump_impea
 
 
     app.get('/scrape', function(req, res){
-        url = listOfUrls[102];
+        url = listOfUrls[104];
 
         request(url, function(error, response, html){
             if(!error){
@@ -218,16 +218,25 @@ listOfUrls[194] = 'http://www.slate.com/blogs/the_slatest/2017/08/16/trump_impea
 
                 var json = { article: ""};
 
-
+                //Generally will work
                 $("article p").filter(function(){
                     var data = $(this);
                     article = article + " " + data.text();  
                 })
 
-                if(article === ""){
+                //MSNBC weird formatting
+                if(article.length < 20){
+                   $("article div:not([class])").filter(function(){
+                        var data = $(this);
+                        article = article + " " + data.text(); 
+                    }) 
+                }
+
+                //Last resort
+                if(article.length < 20){
                     $("p").filter(function(){
                         data = $(this);
-                        article = article + data.text();
+                        article = article + " " + data.text();
                     })    
                 }
 
