@@ -2,6 +2,7 @@
 var sw = require('stopword');
 var stem = require('stem-porter');
 var natural = require('natural');
+
 var NaturalSynaptic = require('natural-synaptic');
 var bayes = require('bayes');
 
@@ -211,22 +212,7 @@ articles[192] = "It would have been so easy to spin the ouster of Steve Bannon a
 articles[193] = "Rotating siren news about former Breitbart chairman and nationalist White House adviser Steve Bannon, who has close ties to the white supremacist movement responsible for last week's violence in Charlottesville, Virginia, emerged moments ago from the Drudge Report: But then Jake Tapper at CNN said it wasn't actually clear where things stood: Source close to Bannon: he's prepared to continue fighting for POTUS's agenda inside or outside; doesn't know what decision has been made. Maggie Haberman of the New York Times seemed to have it confirmed: Bannon going - admin officials say it was Trump, people close to Bannon insist he resigned. https://t.co/XuOvPjZN37 But then ... what? Steve Bannon just told me he resigned from the White House two weeks ago @POTUS #Bannon Let's just assume that \"Steve Bannon no longer works at the White House\" is an appropriate takeaway from all that given that rumors of his imminent departure had been reported by Axios earlier Friday. The Axios report and a just-published New York Times article list a number of reasons why Bannon has lost favor with Trump: He argues too much with National Security Adviser H.R. McMaster, he maintains a high profile in the media that makes Trump jealous, he advocates a populist economic policy that's at odds with the trickle-down conservatism of other advisers, Jared Kushner thinks he's too much of a hard-liner, and so forth. You'll note that nowhere among those reasons are \"he's the country's leading enabler of the white supremacist movement,\" but that's Trump for you. In any case, the white supremacists will now have to make do with the 1 billion other connections they have to the administration. Gabriel Sherman of New York magazine reports that Bannon is expected to return to Breitbart. You haven't heard the last from Steve Bannon (about what crimes immigrants and black people are doing), America! Update, 1:25 p.m.: Bannon friend says Breitbart ramping up for war against Trump. \"It's now a Democrat White House,\" source says. This should be fun! (\"Fun.\") \n         Ben Mathis-Lilley is Slate’s chief news blogger. Follow the Slatest and Mathis-Lilley on Twitter. "
 articles[194] = "In the tradition of the Clintonometer and the Trump Apocalypse Watch, the Impeach-O-Meter is a wildly subjective and speculative daily estimate of the likelihood that Donald Trump leaves office before his term ends, whether by being impeached (and convicted) or by resigning under threat of same. So many CEOs resigned or were ready to resign from Donald Trump's two corporate advisory councils today that one of the councils self-disbanded just before Trump announced, in a face-saving move which did not save face, that he had totally decided to dissolve them both, you can't fire me because I quit, etc. This raises the question: Who cares? On the one hand: A Republican president that Fortune 500 CEOs and Wall Street executives don't want to be seen with even as he's preparing to cut taxes is a politically toxic president indeed. Politicians also don't generally love headlines along the lines of Everyone Is Abandoning [Name of Politician] Because He's Objectively Pro-KKK. On the other hand, to quote my colleague Jim Newell, \"It doesn't hurt Trump's support to have corporations trash him. It happened daily for two years, and then he won the presidency. This is all a public show, and the Republican government and these corporations are still very much on the same team.\" Both sides of this argument have some merit, as our president likes to say about arguments between Nazis and non-Nazis, but, in the end, as always, I believe that Jim is wrong. Corporations will look for any excuse not to take a position on a controversy; that the freakin' CEO of Walmart has openly dumped the white-working-class hero Republican president is a pretty strong indiciator, in my expert opinion, that Trump has really screwed up even by his own low standards. These CEOs, I believe, would absolutely, no doubt kill a drifter to get President Pence in office right now if that's what it took. That said, I'm not going to actually raise the meter until we see a Charlottesville-related drop in the polls. You never know—it could be Jim's lucky day! Photo illustration by Natalie Matthews-Ramo. Photos by Chip Somodevilla/Getty Images, Win McNamee/Getty Images, Chris Kleponis-Pool/Getty Images, Drew Angerer/Getty Images, and Peter Parks-Pool/Getty Images. \n         Ben Mathis-Lilley is Slate’s chief news blogger. Follow the Slatest and Mathis-Lilley on Twitter. "
 
-for(var i = 0 ; i < 103; i++){
-	addRepublicanData(articles[i]);
-}
-for(var i = 103; i < articles.length ; i++){
-	addDemocratData(articles[i]);
-}
 
-function addRepublicanData(articleText){
-	classifier.learn(articleText, 'Republican');
-}
-
-function addDemocratData(articleText){
-	classifier.learn(articleText, 'Democrat');
-}
-
-console.log(lassifier.categorize('Impeach Trump'));
 
 /*
 	//tokenizes list
