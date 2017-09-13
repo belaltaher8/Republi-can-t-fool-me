@@ -8,22 +8,22 @@
 
 body{
   text-align: center;
-  background-color:#0052A5;
+  background-color:#FFFFFF;
 }
 
 h1{
-  color:#FFFFFF;
+  color:#000000;
   font-family: Palatino;
 }
 
 #prompt{
-  color:#FFFFFF;
+  color:#000000;
   font-family: Palatino;
   text-align: center;
 }
 
 
-.logoHeader{
+#logoHeader{
   text-align:center;
 }
 
@@ -39,12 +39,13 @@ h1{
 }
 
 .image{
-  width:33%;
+  width:50%;
   height:auto
 }
 
 .image_holder{
   text-align:center;
+  width: 33%;
 }
 
 #result{
@@ -62,7 +63,7 @@ h1{
     </td>
 
     <td>
-      <h1 class = "logoHeader">Can't fool me!</h1>
+      <h1 id = "logoHeader">Submit an article URL below!</h1>
     </td>
 
     <td class = "image_holder">
@@ -75,7 +76,7 @@ h1{
 
 <body>
         <p class = "prompt">
-          Submit an article below and see what kind of political view it represents</p>
+           </p>
 
         <p>
           <input id = "urlBox"
