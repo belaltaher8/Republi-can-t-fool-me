@@ -75,7 +75,6 @@ app.post('/classify', function(req, resp) {
               globalListString = data;
               globalListOfBigrams = JSON.parse(globalListString);
 
-
               //tokenizes list
               var tokenizedList = tokenizer.tokenize(article);
 
@@ -99,16 +98,15 @@ app.post('/classify', function(req, resp) {
                 }
               }
 
-              var featureVector = Array.apply(null, Array(3692)).map(Number.prototype.valueOf,0);
+              var featureVector = Array.apply(null, Array(702)).map(Number.prototype.valueOf,0);
               var counter = 0;
 
-              for (key in globalListOfBigrams){
+              globalListOfBigrams.forEach(function(key) {
                 if(key in personalListOfBigrams){
                   featureVector[counter] = 1;
-                  console.log("Feature: " + counter + ", is not zero");
                 }
                 counter = counter + 1;
-              }
+              });
 
               var jsonString;
 
