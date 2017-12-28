@@ -209,7 +209,7 @@ listOfUrls[194] = 'http://www.slate.com/blogs/the_slatest/2017/08/16/trump_impea
 
 
     app.get('/scrape', function(req, res){
-        url = listOfUrls[194];
+        url = 'http://www.foxnews.com/politics/2017/12/26/junk-science-studies-behind-obama-regulations-under-fire.html'
 
         request(url, function(error, response, html){
             if(!error){

@@ -2,8 +2,6 @@
 
 document.addEventListener('DOMContentLoaded', function() {
 
-	
-
 	var submitButton = document.getElementById('submitButton');
 
 	submitButton.addEventListener('click', function(){
@@ -20,7 +18,16 @@ document.addEventListener('DOMContentLoaded', function() {
 			if (xhr.readyState === 4) { 
 				if (xhr.status === 200) { 
 				var respJSON = JSON.parse(xhr.responseText); 
-				document.getElementById("result").innerHTML = respJSON["Answer"];
+					console.log(respJSON["Answer"]);
+					if(respJSON["Answer"] < 0.5){
+						document.getElementById("result").innerHTML = "Republican";
+					}
+					else if(respJSON["Answer"] <= 1){
+						document.getElementById("result").innerHTML = "Democrat";
+					}
+					else{
+						document.getElementById("result").innerHTML = "Sorry. Something went wrong.";
+					}
 				}
 				else { 
 				//console.error(xhr.statusText); 
@@ -36,9 +43,6 @@ document.addEventListener('DOMContentLoaded', function() {
 		var myDict = {myUrl : url};
 		
 		xhr.send(JSON.stringify(myDict));
-
-
-
 	});
 
 });
