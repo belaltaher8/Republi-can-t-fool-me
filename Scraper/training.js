@@ -9,10 +9,7 @@ var synaptic = require('synaptic');
 var fs = require('fs');
 
 //Create neural network and trainer
-console.log("gets here");
-//var myPerceptron = new synaptic.Architect.Perceptron(3692, 1800, 900, 450, 200, 100, 50, 1);
-var myPerceptron = new synaptic.Architect.Perceptron(3692,1,1);
-console.log("yup");
+var myPerceptron = new synaptic.Architect.Perceptron(3692, 1500, 1);
 var trainer = new synaptic.Trainer(myPerceptron);
 
 var articles = [];
@@ -221,7 +218,6 @@ var articlesBigramLists = new Map();
 
 //Preprocess each article's text body and record bigrams
 for(var art = 1; art < 195; art++){
-	console.log("recording bigrams from article: " + art);
 	articleText = articles[art];
 
 	//tokenizes list
@@ -236,7 +232,6 @@ for(var art = 1; art < 195; art++){
 
 	//Removes stop words
 	var newList = sw.removeStopwords(tokenizedList);
-
 
 	var personalListOfBigrams = new Map();
 	//Adds all the bigrams found in the current article to the global list of bigrams and a personal list of bigrams
@@ -253,7 +248,6 @@ for(var art = 1; art < 195; art++){
 		}
 		//If the bigram is not in the global hashmap nor the personal hashmap
 		else if ((globalListOfBigrams.get(newBigram) == undefined) && (personalListOfBigrams.get(newBigram) == undefined)) {
-
 			//Add it to the global hashmap
 			globalListOfBigrams.set(newBigram, 1);
 			//Add it to the personal hashmap
@@ -268,17 +262,17 @@ for(var art = 1; art < 195; art++){
 // Makes the bigrams we actually use as features ones that have a freq of 2 or greater
 var finalGlobalList = new Map();
 
-// Saves all the bigrams with a freq of 2 or greater in the final global list
-for (var currBigram in globalListOfBigrams.keys()){
-	if(globalListOfBigrams.get(currBigram) > 1){
-		finalGlobalList.set(currBigram, 1);
-	}
-}
+globalListOfBigrams.forEach(function (item, key, mapObj) {  
+    if(globalListOfBigrams.get(key) > 1){
+    	finalGlobalList.set(key, 1);
+    }
+}); 
+
+console.log(finalGlobalList.size);
 
 // Creates the feature vectors for the training data
 var trainingData = [];
 for(var art = 1; art < 195; art++){
-	console.log("Training with feature vector for: " + art);
 	currPersonalList = articlesBigramLists[art];
 
 	//Initially assumes all 0's in training data feature vector
