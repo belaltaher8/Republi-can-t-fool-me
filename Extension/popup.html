@@ -16,6 +16,11 @@
 body{
   text-align: center;
   background-color:#FFFFFF;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 h1{
@@ -23,10 +28,32 @@ h1{
   font-family: 
 }
 
+.span_screen{
+  width:100%;
+}
+
+.text_holder{
+  font-family: My-font;
+}
+
+.image{
+  width:100%;
+  height:auto
+}
+
+.center_text{
+  text-align:center;
+}
+
+.logo_holder{
+  text-align:center;
+  width: 33%;
+}
+
 #prompt{
   color:#000000;
-  font-family: My-font;
   text-align: center;
+  width: 300px;
 }
 
 
@@ -37,29 +64,12 @@ h1{
   margin-top: 30px;
 }
 
-.span_screen{
-  width:100%;
-}
-
-.image{
-  width:100%;
-  height:auto
-}
-
-.logo_header{
-  text-align:center;
-}
-
-.logo_holder{
-  text-align:center;
-  width: 33%;
-}
-
 #result{
   color:#000000;
   font-family: My-font;
   margin-top: 30px;
   margin-bottom: 30px;
+  font-size: 16px;
 }
 
 
@@ -75,26 +85,29 @@ h1{
     </td>
 
     <td>
-      <h1 id = "logo_header">Submit an article URL below!</h1>
+      <h1 class = "text_holder center_text" >Submit an article URL below!</h1>
     </td>
 
   </tr>
 </table>
 
 <body>
-        <p class = "prompt">
+        <p class = "text_holder" id = "prompt">
            </p>
 
         <p>
-          <input id = "urlBox"
+          <input class = "text_holder center_text" 
+                 id = "urlBox"
+                 size = "40"
                  type = "text"
                  style= "color:#888;"
                  placeholder = "Article URL" />
         </p>
 
-      <button id = "submitButton"> Submit </button>
+      <button class = "text_holder" id = "submitButton"> Submit </button>
 
-    <p id = "result"> Give it some time. The server might be asleep. <p>
+    <p class = "text_holder" id = "result"> Give it some time. The server might be asleep. <p>
 
 </body>
+
 </html>

@@ -27,14 +27,14 @@ document.addEventListener('DOMContentLoaded', function() {
 					else if(respJSON["Answer"] <= 1){
 						document.getElementById("result").innerHTML = "Democrat";
 						document.body.style.backgroundColor = "blue";
+
 					}
 					else{
-						document.getElementById("result").innerHTML = "Sorry. Something went wrong.";
+						document.getElementById("result").innerHTML = "Sorry. Something's wrong with the article!";
 					}
 				}
 				else { 
-				//console.error(xhr.statusText); 
-				//handle error status 
+					document.getElementById("result").innerHTML = "Sorry. Something's wrong with the server!";
 				} 
 			} 
 		}; 
