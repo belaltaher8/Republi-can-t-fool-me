@@ -6,6 +6,13 @@
 
 <style type='text/css'>
 
+@font-face {
+  font-family: 'My-font';
+  font-style: normal;
+  font-weight: 700;
+  src: url('chrome-extension://eljcnacaefoeaoigieecpdngkblbkceg/fonts/CabinCondensed-Regular.ttf');
+}
+
 body{
   text-align: center;
   background-color:#FFFFFF;
@@ -13,15 +20,14 @@ body{
 
 h1{
   color:#000000;
-  font-family: Palatino;
+  font-family: 
 }
 
 #prompt{
   color:#000000;
-  font-family: Palatino;
+  font-family: My-font;
   text-align: center;
 }
-
 
 
 #submitButton{
@@ -51,6 +57,9 @@ h1{
 
 #result{
   color:#000000;
+  font-family: My-font;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 
@@ -80,7 +89,7 @@ h1{
           <input id = "urlBox"
                  type = "text"
                  style= "color:#888;"
-                 value = "Article URL" />
+                 placeholder = "Article URL" />
         </p>
 
       <button id = "submitButton"> Submit </button>

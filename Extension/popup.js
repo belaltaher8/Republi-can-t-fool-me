@@ -1,5 +1,6 @@
 
 
+
 document.addEventListener('DOMContentLoaded', function() {
 
 	var submitButton = document.getElementById('submitButton');
@@ -21,9 +22,11 @@ document.addEventListener('DOMContentLoaded', function() {
 					console.log(respJSON["Answer"]);
 					if(respJSON["Answer"] < 0.5){
 						document.getElementById("result").innerHTML = "Republican";
+						document.body.style.backgroundColor = "red";
 					}
 					else if(respJSON["Answer"] <= 1){
 						document.getElementById("result").innerHTML = "Democrat";
+						document.body.style.backgroundColor = "blue";
 					}
 					else{
 						document.getElementById("result").innerHTML = "Sorry. Something went wrong.";

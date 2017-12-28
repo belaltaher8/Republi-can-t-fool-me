@@ -9,7 +9,7 @@ var synaptic = require('synaptic');
 var fs = require('fs');
 
 //Create neural network and trainer
-var myPerceptron = new synaptic.Architect.Perceptron(702, 100, 1);
+var myPerceptron = new synaptic.Architect.Perceptron(702, 50, 1);
 var trainer = new synaptic.Trainer(myPerceptron);
 
 var articles = [];
