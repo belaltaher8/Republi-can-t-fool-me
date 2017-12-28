@@ -9,7 +9,7 @@ var synaptic = require('synaptic');
 var fs = require('fs');
 
 //Create neural network and trainer
-var myPerceptron = new synaptic.Architect.Perceptron(3692, 1500, 1);
+var myPerceptron = new synaptic.Architect.Perceptron(702, 100, 1);
 var trainer = new synaptic.Trainer(myPerceptron);
 
 var articles = [];
@@ -263,7 +263,7 @@ for(var art = 1; art < 195; art++){
 var finalGlobalList = new Map();
 
 globalListOfBigrams.forEach(function (item, key, mapObj) {  
-    if(globalListOfBigrams.get(key) > 1){
+    if(globalListOfBigrams.get(key) > 3){
     	finalGlobalList.set(key, 1);
     }
 }); 
@@ -276,11 +276,10 @@ for(var art = 1; art < 195; art++){
 	currPersonalList = articlesBigramLists[art];
 
 	//Initially assumes all 0's in training data feature vector
-	var featureVector = Array.apply(null, Array(3692)).map(Number.prototype.valueOf,0);
+	var featureVector = Array.apply(null, Array(702)).map(Number.prototype.valueOf,0);
 	var counter = 0;
 
-	//Goes through all the possible features and check if this article has any
-	for (var key in finalGlobalList.keys()){
+	for (var [key, value] of finalGlobalList) {
 		if(currPersonalList.get(key) != undefined){
 			featureVector[counter] = 1;
 		}
@@ -310,14 +309,20 @@ trainer.train(trainingData);
 //Serializes the neural network as a JSON
 var json = myPerceptron.toJSON();
 
+var toSerialize = [];
+
+finalGlobalList.forEach(function (item, key, mapObj) {  
+    toSerialize.push(key);
+}); 
+
 //Writes the classifier and final global list of bigrams to a file
 fs.writeFile('classifier.json', JSON.stringify(json), function(err){
 	console.log('File successfully written! - Check your project directory for the output.json file');
-})
+});
 
-fs.writeFile('globalList.json', JSON.stringify(finalGlobalList), function(err){
+fs.writeFile('globalList.json', JSON.stringify(toSerialize), function(err){
 	console.log('File successfully written! - Check your project director for the globalList.json file');
-})
+});
 
 
 
