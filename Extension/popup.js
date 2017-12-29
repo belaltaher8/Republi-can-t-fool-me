@@ -22,16 +22,16 @@ document.addEventListener('DOMContentLoaded', function() {
 					console.log(respJSON["Answer"]);
 					if(respJSON["Answer"] < 0.4){
 						document.getElementById("result").innerHTML = "Republican";
-						document.body.style.backgroundColor = "red";
+						document.body.style.background = "rgba(255,0,0,0.7)";
 					}
 					else if(respJSON["Answer"] > 0.6 && respJSON["Answer"] < 1){
 						document.getElementById("result").innerHTML = "Democrat";
-						document.body.style.backgroundColor = "blue";
+						document.body.style.backgroundColor = "rgba(0,0,255,0.7)";
 
 					}
 					else if(respJSON["Answer"] <= 0.6 && respJSON["Answer"] >= 0.4){
 						document.getElementById("result").innerHTML = "Neutral";
-						document.body.style.backgroundColor = "white";
+						document.body.style.backgroundColor = "rgba(0,0,0,0.7)";
 					}
 					else{
 						document.getElementById("result").innerHTML = "Sorry. Something's wrong with the article!";
